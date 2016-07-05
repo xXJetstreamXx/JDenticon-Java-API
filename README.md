@@ -33,7 +33,7 @@ ___
 
 ### Installation
 
-Simply download the latest file as **.jar** (e.g. "JDJA version 0.5.jar") and add it to your _Java Build Path_
+Simply download the latest file as **.jar** (e.g. "JDJA version 0.5.jar") and add it to your _Java Build Path_. 
 
 #### Eclipse:
 
@@ -43,12 +43,43 @@ If you want to install JDJA in Eclipse follow these steps after downloading the 
 1. go to your Java Build Path: `left-click on your project -> Properties -> Java Build Path`
 2. add JDJA: `Libraries -> Add External Jars -> select your downloaded .jar`
 3. done, you can now use JDJA
+4. After that download the **jdenticon.js** and put it into your src folder.
 
 ___
 
 ### Usage
 
---- w.i.p.
+You first have to import everything using 
+```java 
+import de.thejetstream.jdja.main.JDenticon;
+```
+
+In the code, where you want to generate the SVG use the following code to **generate a hash**:
+
+```java
+JDenticon jd = new JDenticon();
+
+String hash = jd.generateHash("TestString"); //replace 'TestString' with your String
+```
+
+After you have a hashcode you can **generate the SVG-String**
+
+```java
+String svgstring = jd.generateSVG(hash, 100); // replace '100' with the size you want for your .svg
+```
+
+If you now want to **save the .svg** use
+
+```java
+// this will save the file "testfile.svg" in C:/
+jd.saveSVG(svgstring, "testfile", "C:/"); // replace 'testfile' with your filename and 'C:/' with your location
+```
+
+#### tips & tricks
+
+You can also call the `JDenticon` class with a paramter (the hashcode). With the hashcode already loaded you don't have to give a hash when calling `generateSVG()`. You can also set the hash afterwards using `setHash(String hash)`.
+
+Another thing you can set is the SVGString using `setSVGString(String newSVGString)`. After you have done that you can call the `saveSVG` without giving the svgString.
 
 ___
 
