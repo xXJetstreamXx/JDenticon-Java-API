@@ -10,5 +10,57 @@ There are various generators for Identicons out there and when building a powerf
 
 And the Identicons are very nicely generated and can be generated as *.svg*-files. Unfortunately **JDenticon** is written in *javascript* and can't be used in **Java** without some other code.
 
+___
+
+### Example Pictures
+
+<img src="https://s31.postimg.org/co8invbpj/Test.png" width="200">
+<img src="https://s31.postimg.org/ki9499jif/Test_Number_One.png" width="200">
+<img src="https://s31.postimg.org/hpfwp8j5z/Test_Number_Three.png" width="200">
 
 
+___
+
+### JDJA
+
+And that's exactly the point where **Jdenticon Java API** is useful. It let's you easily import the few classes and use the methods to
+
+- **generate hashcodes** from a given String
+- **generate a .svg** file from a hashcode
+- **save the file** on a given location on your pc
+
+___
+
+### Installation
+
+Simply download the latest file as **.jar** (e.g. "JDJA version 0.5.jar") and add it to your _Java Build Path_
+
+#### Eclipse:
+
+If you want to install JDJA in Eclipse follow these steps after downloading the **.jar**:
+
+0. Create a new project: `File -> New -> Java project` (only if you want to start a new project)
+1. go to your Java Build Path: `left-click on your project -> Properties -> Java Build Path`
+2. add JDJA: `Libraries -> Add External Jars -> select your downloaded .jar`
+3. done, you can now use JDJA
+
+___
+
+## Usgae
+
+--- w.i.p.
+
+___
+
+### Downloads
+
+... w.i.p.
+
+___
+
+### ToDo
+
+- [x] add svg support
+- [ ] add canvas support
+- [ ] add image export for **.png** and **.jpg**
+- [ ] rework code for better understanding
