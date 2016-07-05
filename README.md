@@ -46,7 +46,7 @@ If you want to install JDJA in Eclipse follow these steps after downloading the 
 
 ___
 
-## Usgae
+### Usage
 
 --- w.i.p.
 
