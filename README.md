@@ -89,6 +89,16 @@ ___
 
 ___
 
+### Changelog
+
+#### Version 0.5 (first public release)
+
+- added support for .svg files
+- added export of .svg
+- implemented the generation of hash-codes from given strings
+
+___
+
 ### ToDo
 
 - [x] add svg support
