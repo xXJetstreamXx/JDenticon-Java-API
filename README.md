@@ -85,7 +85,7 @@ ___
 
 ### Downloads
 
-... w.i.p.
+Version 0.5: [MEGA](https://mega.nz/#!xcgWkJYa!KumUEkA5qXQ77byiQ9Hy2u9LI9XCYlXsY1093pQcfMk)
 
 ___
 
