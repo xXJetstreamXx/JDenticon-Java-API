@@ -40,11 +40,13 @@ And that's exactly the point where **Jdenticon Java API** is useful. It let's yo
 - **generate a .svg** file from a hashcode
 - **save the file** on a given location on your pc
 
+JDJA uses **Apache batik** and the **jdenticon.js** to work and generates with just these 2 things images in various formats.
+
 ___
 
 ### Installation
 
-Simply download the latest file as **.jar** (e.g. "JDJA version 0.5.jar") and add it to your _Java Build Path_. 
+Simply download the latest file as **.jar** (e.g. "JDJA version 0.5.jar") and add it to your _Java Build Path_. After that you have to get **Apache Batik** and add it to your _Java Build Path_ as well. ([Link here - **use Batik 1.7!!**](https://xmlgraphics.apache.org/batik))
 
 #### Eclipse:
 
