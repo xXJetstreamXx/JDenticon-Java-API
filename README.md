@@ -21,6 +21,7 @@ ___
 5. [Downloads](https://github.com/xXJetstreamXx/JDenticon-Java-API#downloads)
 6. [Changelog](https://github.com/xXJetstreamXx/JDenticon-Java-API#changelog)
 7. [ToDo](https://github.com/xXJetstreamXx/JDenticon-Java-API#todo)
+
 ___
 
 ### Example Pictures
