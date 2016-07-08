@@ -12,16 +12,26 @@ And the Identicons are very nicely generated and can be generated as *.svg*-file
 
 ___
 
+### Contents
+
+1. [Example Pictures](https://github.com/xXJetstreamXx/JDenticon-Java-API#example-pictures)
+2. [JDJA explained](https://github.com/xXJetstreamXx/JDenticon-Java-API#jdja-explained)
+3. [Installation](https://github.com/xXJetstreamXx/JDenticon-Java-API#installation)
+4. [Usage](https://github.com/xXJetstreamXx/JDenticon-Java-API#usage)
+5. [Downloads](https://github.com/xXJetstreamXx/JDenticon-Java-API#downloads)
+6. [Changelog](https://github.com/xXJetstreamXx/JDenticon-Java-API#changelog)
+7. [ToDo](https://github.com/xXJetstreamXx/JDenticon-Java-API#todo)
+___
+
 ### Example Pictures
 
 <img src="https://s31.postimg.org/co8invbpj/Test.png" width="200">
 <img src="https://s31.postimg.org/ki9499jif/Test_Number_One.png" width="200">
 <img src="https://s31.postimg.org/hpfwp8j5z/Test_Number_Three.png" width="200">
 
-
 ___
 
-### JDJA
+### JDJA explained
 
 And that's exactly the point where **Jdenticon Java API** is useful. It let's you easily import the few classes and use the methods to
 
@@ -42,44 +52,14 @@ If you want to install JDJA in Eclipse follow these steps after downloading the 
 0. Create a new project: `File -> New -> Java project` (only if you want to start a new project)
 1. go to your Java Build Path: `left-click on your project -> Properties -> Java Build Path`
 2. add JDJA: `Libraries -> Add External Jars -> select your downloaded .jar`
-3. done, you can now use JDJA
-4. After that download the **jdenticon.js** and put it into your src folder.
+3. After that download the **jdenticon.js** ([Link](https://cdn.jsdelivr.net/jdenticon/1.3.2/jdenticon.min.js)) and put it into your src folder.
+4. you can now use JDJA
 
 ___
 
 ### Usage
 
-You first have to import everything using 
-```java 
-import de.thejetstream.jdja.main.JDenticon;
-```
-
-In the code, where you want to generate the SVG use the following code to **generate a hash**:
-
-```java
-JDenticon jd = new JDenticon();
-
-String hash = jd.generateHash("TestString"); //replace 'TestString' with your String
-```
-
-After you have a hashcode you can **generate the SVG-String**
-
-```java
-String svgstring = jd.generateSVG(hash, 100); // replace '100' with the size you want for your .svg
-```
-
-If you now want to **save the .svg** use
-
-```java
-// this will save the file "testfile.svg" in C:/
-jd.saveSVG(svgstring, "testfile", "C:/"); // replace 'testfile' with your filename and 'C:/' with your location
-```
-
-#### tips & tricks
-
-You can also call the `JDenticon` class with a paramter (the hashcode). With the hashcode already loaded you don't have to give a hash when calling `generateSVG()`. You can also set the hash afterwards using `setHash(String hash)`.
-
-Another thing you can set is the SVGString using `setSVGString(String newSVGString)`. After you have done that you can call the `saveSVG` without giving the svgString.
+Work in progress (version 0.6 changes)
 
 ___
 
@@ -87,6 +67,7 @@ ___
 
 Version 0.5: [MEGA](https://mega.nz/#!xcgWkJYa!KumUEkA5qXQ77byiQ9Hy2u9LI9XCYlXsY1093pQcfMk)
 
+Version 0.7: [MEGA](https://mega.nz/#!tRQFXI4A!5gQMvo2HT5ukdf9sGtyLqCZqWVob6YP4AhYWuOzYPfs)
 ___
 
 ### Changelog
@@ -97,11 +78,25 @@ ___
 - added export of .svg
 - implemented the generation of hash-codes from given strings
 
+#### Version 0.6 [not released]
+
+- minor changes (first implementation of JPG / PNG export)
+
+#### Version 0.7
+
+- made the code look better
+- added support for generating JPG
+- added support for generating PNG
+- added own "Hash" data type (for better handling, to minimize failure)
+- added HashGen class to generate hashcodes
+- changed data format (now type "File" is getting returned)
+
 ___
 
 ### ToDo
 
 - [x] add svg support
 - [ ] add canvas support
-- [ ] add image export for **.png** and **.jpg**
-- [ ] rework code for better understanding
+- [x] add image export for **.png** and **.jpg**
+- [x] rework code for better understanding
+- [ ] add support for **.pdf**
