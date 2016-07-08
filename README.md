@@ -4,7 +4,7 @@ Identicons are images that are generated for users of websites and programs that
 
 >  a visual representation of a hash value, usually of an IP address, that serves to identify a user of a computer system as a form of avatar while protecting the users' privacy.
 
-There are various generators for Identicons out there and when building a powerful program with **Java** you may want to add a bit of an extra for your users. So instead of having one basic image for every user after signup you could use an Identicon. According to [Jdenticon](http://jdenticon.com/) it is a
+There are various generators for Identicons out there and when building a powerful program with **Java** you may want to add a bit of an extra for your users. So instead of having one basic image for every user after signup you could use an Identicon. According to [JDenticon](http://jdenticon.com/) it is a
 
 > free Javascript library for generating highly recognizable identicons.
 
@@ -60,7 +60,33 @@ ___
 
 ### Usage
 
-Work in progress (version 0.6 changes)
+First you have to **import** everything needed for this program to run. Do this by putting this to you imports:
+
+```java
+import de.jdenticon.main.HashGen;
+import de.jdenticon.main.JDenticon;
+import de.jdenticon.utilities.Hash;
+```
+
+To generate a jpg File use this code:
+
+```java
+JDenticon jd = new JDenticon();
+
+File jpg = jd.generateJPG("test", 1000); //"test" -> String that is converted to Hash
+                                         // 1000  -> size of the image
+	
+// the next 3 lines are just for saving the generated file on your computer	
+BufferedImage img = ImageIO.read(jpg);
+		
+File out = new File("C:/outFile.jpg");   //"C:/output.jpg" is the file that java writes to
+		
+ImageIO.write(img, "jpg", out);          //writes the file
+```
+
+The code above is also used to generate PNG (just replace "jpg" with "png".
+
+If you now want to generate a .svg file the code for saving it on you computer is a little bit different. You don't have to use `ImageIO` in this case. Just write the data to a File like `C:/output.svg` line by line (normally its just 1 line).
 
 ___
 
